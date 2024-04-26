@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "organizeMe.requisicoes",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

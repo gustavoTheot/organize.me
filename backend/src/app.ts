@@ -7,6 +7,12 @@ import { ZodError } from "zod";
 
 export const app = fastify()
 
+app.register(cors, {
+    origin: '*',
+    methods: 'GET,PUT,POST,DELETE',
+    allowedHeaders: 'Content-Type,Authorization'
+})
+
 app.register(routerUser, { prefix: '/user' })
 app.register(routerTransaction, { prefix: '/transaction' })
 
@@ -24,5 +30,5 @@ app.setErrorHandler((error, _, reply) => {
     return reply.status(500).send({ message: 'Internal server error.' })
 })
 
-app.register(cors)
+
 

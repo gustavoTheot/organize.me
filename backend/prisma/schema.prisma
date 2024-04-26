@@ -21,7 +21,7 @@ model User {
 
 model Transaction {
   id           Int      @id @default(autoincrement())
-  value        Decimal
+  value        String
   date         DateTime @default(now())
   local        String   @db.VarChar(120)
   type         String

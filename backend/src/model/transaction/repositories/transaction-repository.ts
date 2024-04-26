@@ -11,8 +11,20 @@ export class TransactionRepository implements ITransaction {
         return transaction
     }
 
-    async getTransactions() {
-        return await prisma.transaction.findMany()
+    async getTransactionsPerMonth(month: number) {
+        const year = new Date().getFullYear()
+        const startDate = new Date(year, month - 1, 1)
+        const endDate = new Date(year, month, 1)
+
+
+        return await prisma.transaction.findMany({
+            where:{
+                date:{
+                    gte: startDate,
+                    lt: endDate
+                }
+            }
+        })
     }
 
 }

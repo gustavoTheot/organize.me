@@ -13,7 +13,9 @@ export function Header() {
                     <li>
                         <Link to={'/register'}>Registro</Link >
                     </li>
-                    <li>Planilha</li>
+                    <li>
+                        <Link to={'/spreadsheet'}>Planilha</Link>
+                    </li>
                     <li>Perfil</li>
                     <li>Configuração</li>
                 </ul>

@@ -3,7 +3,7 @@ import { ITransaction } from "../repositories/ITransaction"
 
 interface CreateTransactionUseCaseRequest {
     userId: string
-    value: number
+    value: string
     date?: Date | string
     local: string
     type: string

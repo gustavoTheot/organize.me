@@ -1,0 +1,21 @@
+meta {
+  name: createRegister
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:3333/transaction/create/32020ac6-8671-4da6-89b8-1e091839ab1d
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "value": "2000", 
+    "local": "Mercado", 
+    "type": "input", 
+    "formPayament": "credit", 
+    "parcel": "1x"
+  }
+}
